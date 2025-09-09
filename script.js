@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <strong>Fecha:</strong> ${fecha}<br>
                 <strong>Hora:</strong> ${hora}<br>
                 <strong>Servicio:</strong> ${servicio}
-            `;
+            `
             
             confirmacion.style.display = 'block';
             formulario.reset();
