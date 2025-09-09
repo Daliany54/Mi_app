@@ -6,12 +6,13 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #008080; /* Verde azulejo */
+    line-height: 1.6;
+    background-color: #3fe6d0a6;
     color: #333;
     padding: 20px;
 }
 
-.contenedor {
+.container {
     max-width: 600px;
     margin: 0 auto;
     background: white;
@@ -22,11 +23,12 @@ body {
 
 h1 {
     text-align: center;
-    color: #004d4d;
+    color: #2c5530;
     margin-bottom: 30px;
+    font-size: 2em;
 }
 
-.grupo-formulario {
+.form-group {
     margin-bottom: 20px;
 }
 
@@ -34,36 +36,94 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #006666;
+    color: #555;
 }
 
-input, select {
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select {
     width: 100%;
     padding: 12px;
     border: 2px solid #ddd;
     border-radius: 6px;
     font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
 }
 
 button {
     width: 100%;
-    background: linear-gradient(135deg, #006666, #008080);
+    background: linear-gradient(135deg, #36f362, #20c997);
     color: white;
     padding: 15px;
     border: none;
     border-radius: 6px;
     font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #004d4d, #006666);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
 }
 
-#confirmacion {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #d4edda;
-    border-radius: 5px;
-    display: none;
+button:active {
+    transform: translateY(0);
+}
+
+#confirmation {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#confirmation h3 {
+    color: #155724;
+    margin-bottom: 10px;
+}
+
+#confirmation-details {
+    color: #0f5132;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    select {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
 }
