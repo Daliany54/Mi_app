@@ -4,35 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Odontológico - Reserva de Citas</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="contenedor">
+    <div class="container">
         <h1>Reserva de Citas Odontológicas</h1>
-        <form id="formulario-cita">
-            <div class="grupo-formulario">
-                <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" required>
+        <form id="appointment-form">
+            <div class="form-group">
+                <label for="name">Nombre completo:</label>
+                <input type="text" id="name" required>
             </div>
-            <div class="grupo-formulario">
+            <div class="form-group">
                 <label for="email">Correo electrónico:</label>
                 <input type="email" id="email" required>
             </div>
-            <div class="grupo-formulario">
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" required>
+            <div class="form-group">
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" required>
             </div>
-            <div class="grupo-formulario">
-                <label for="fecha">Fecha deseada:</label>
-                <input type="date" id="fecha" required>
+            <div class="form-group">
+                <label for="date">Fecha deseada:</label>
+                <input type="date" id="date" required>
             </div>
-            <div class="grupo-formulario">
-                <label for="hora">Hora preferida:</label>
-                <input type="time" id="hora" required>
+            <div class="form-group">
+                <label for="time">Hora preferida:</label>
+                <input type="time" id="time" required>
             </div>
-            <div class="grupo-formulario">
-                <label for="servicio">Servicio requerido:</label>
-                <select id="servicio" required>
+            <div class="form-group">
+                <label for="service">Servicio requerido:</label>
+                <select id="service" required>
                     <option value="">Seleccione un servicio</option>
                     <option value="limpieza">Limpieza dental</option>
                     <option value="blanqueamiento">Blanqueamiento</option>
@@ -43,9 +43,9 @@
             </div>
             <button type="submit">Reservar Cita</button>
         </form>
-        <div id="confirmacion" style="display: none;">
+        <div id="confirmation" style="display: none; margin-top: 20px; padding: 15px; background-color: #d4edda; border-radius: 5px;">
             <h3>¡Cita reservada exitosamente!</h3>
-            <p id="detalles-confirmacion"></p>
+            <p id="confirmation-details"></p>
         </div>
     </div>
     <script src="script.js"></script>
