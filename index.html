@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Centro Odontológico - Reserva de Citas</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    
+    <div class="contenedor">
+        <h1>Reserva de Citas Odontológicas</h1>
+        <form id="formulario-cita">
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="fecha">Fecha deseada:</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="hora">Hora preferida:</label>
+                <input type="time" id="hora" required>
+            </div>
+            <div class="grupo-formulario">
+                <label for="servicio">Servicio requerido:</label>
+                <select id="servicio" required>
+                    <option value="">Seleccione un servicio</option>
+                    <option value="limpieza">Limpieza dental</option>
+                    <option value="blanqueamiento">Blanqueamiento</option>
+                    <option value="ortodoncia">Ortodoncia</option>
+                    <option value="extraccion">Extracción</option>
+                    <option value="calza">Calza (obturación)</option>
+                </select>
+            </div>
+            <button type="submit">Reservar Cita</button>
+        </form>
+        <div id="confirmacion" style="display: none;">
+            <h3>¡Cita reservada exitosamente!</h3>
+            <p id="detalles-confirmacion"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
